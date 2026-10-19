@@ -42,29 +42,28 @@
                     <span>Dashboard</span>
                 </a>
                 
-                <a href="#" 
-                   class="flex items-center p-3 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white transition-all">
-                    <i class="fas fa-comments w-6"></i>
-                    <span>Mensajes</span>
-                </a>
-                
-                <a href="#" 
-                   class="flex items-center p-3 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white transition-all">
-                    <i class="fas fa-robot w-6"></i>
-                    <span>IA Moderación</span>
-                </a>
-                
-                <a href="#" 
-                   class="flex items-center p-3 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white transition-all">
-                    <i class="fas fa-shopping-cart w-6"></i>
-                    <span>Pedidos</span>
-                </a>
-                
-                <a href="#" 
-                   class="flex items-center p-3 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white transition-all">
-                    <i class="fas fa-broadcast-tower w-6"></i>
-                    <span>Control LIVE</span>
-                </a>
+ <a href="{{ url('/tiktok-api/mensajes') }}" 
+   class="flex items-center p-3 rounded-lg {{ request()->is('tiktok-api/mensajes') ? 'bg-gray-800 text-white' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }} transition-all">
+    <i class="fas fa-comments w-6"></i>
+    <span>Mensajes</span>
+</a>
+
+<a href="{{ url('/tiktok-api/moderacion') }}" 
+   class="flex items-center p-3 rounded-lg {{ request()->is('tiktok-api/moderacion') ? 'bg-gray-800 text-white' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }} transition-all">
+    <i class="fas fa-robot w-6"></i>
+    <span>IA Moderación</span>
+</a>
+
+<a href="{{ url('/tiktok-api/live-control') }}" 
+   class="flex items-center p-3 rounded-lg {{ request()->is('tiktok-api/live-control') ? 'bg-gray-800 text-white' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }} transition-all">
+    <i class="fas fa-broadcast-tower w-6"></i>
+    <span>Control LIVE</span>
+</a>
+<a href="{{ url('/tiktok-api/mensajes-filtrados') }}" 
+   class="flex items-center p-3 rounded-lg {{ request()->is('tiktok-api/mensajes-filtrados') ? 'bg-gray-800 text-white' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }} transition-all">
+    <i class="fas fa-filter w-6"></i>
+    <span>Mensajes Filtrados</span>
+</a>
 
                 <div class="mt-6">
                     <p class="text-xs text-gray-500 uppercase tracking-wider mb-3 ml-3">Configuración</p>

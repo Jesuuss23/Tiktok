@@ -122,5 +122,6 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
+    'tiktok_api_key' => env('TIKTOK_API_KEY'),
 
 ];
